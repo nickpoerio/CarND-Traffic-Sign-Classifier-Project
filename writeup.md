@@ -4,10 +4,10 @@
 
 [//]: # (Image References)
 
-[image1]: ./writeup_resources/exploratory_visualization1.jpg "training set"
-[image2]: ./writeup_resources/exploratory_visualization2.jpg "validation set"
-[image3]: ./writeup_resources/exploratory_visualization3.jpg "test set"
-[image4]: ./writeup_resources/probability_distributions.jpg "classes occurrences"
+[image1]: ./writeup_resources/exploratory_visualization1.png "training set"
+[image2]: ./writeup_resources/exploratory_visualization2.png "validation set"
+[image3]: ./writeup_resources/exploratory_visualization3.png "test set"
+[image4]: ./writeup_resources/probability_distributions.png "classes occurrences"
 
 
 ---
