@@ -2,6 +2,16 @@
 
 ## Writeup
 
+[//]: # (Image References)
+
+[image1]: ./writeup_resources/exploratory_visualization1.jpg "training set"
+[image2]: ./writeup_resources/exploratory_visualization2.jpg "validation set"
+[image3]: ./writeup_resources/exploratory_visualization3.jpg "test set"
+[image4]: ./writeup_resources/probability_distributions.jpg "classes occurrences"
+
+
+---
+
 ### Data Set Summary & Exploration
 
 #### 1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
@@ -18,15 +28,17 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set. Each row includes 6 randomly chosen images.
+
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+
 There is also a histogram chart, summarizing the distribution of the classes occurences in the different sets, which appears to be very similar.
-Some classes occur less, but there seems to be a sufficient number of samples to proceed.
 
+![alt text][image4]
 
-![alt text][./writeup_resources/exploratory_visualization1.jpg]
-![alt text][./writeup_resources/exploratory_visualization2.jpg]
-![alt text][./writeup_resources/exploratory_visualization3.jpg]
-![alt text][./writeup_resources/exploratory_visualization3.jpg]
-![alt text][./writeup_resources/probability_distributions.jpg]
+Hence, the split is ok.
+Anyhow, some classes occur less, so, compatibly with my RAM availability, I augmented more such classes (see next).
 
 
 ### Design and Test a Model Architecture
@@ -34,10 +46,17 @@ Some classes occur less, but there seems to be a sufficient number of samples to
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 Before converting to grey scale and normalizing, I applied image effects in order to augment the training set.
-In particular, I applied the following transformations, randomly, once for each training sample. The training set is so doubled in items.
+In particular, I applied the following transformations, randomly, augmenting at least once for each training sample, twice for the least occuring once (I would have done more if I had more memory):
 
-Here is an example of a traffic sign image before and after grayscaling.
+1. translation
+2. rotation
+3. perspective transformation
+4. zoom
 
+From a quick look at the samples there seemed to be already enough blurring and brightening/darkening effects. 
+
+
+...........
 ![alt text][image2]
 
 As a last step, I normalized the image data because ...
