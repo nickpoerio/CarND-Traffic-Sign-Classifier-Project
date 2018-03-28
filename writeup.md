@@ -42,7 +42,7 @@ There is also a histogram chart, summarizing the distribution of the classes occ
 ![alt text][image4]
 
 Hence, the split is ok.
-Anyhow, some classes occur much less in absolute terms, so I augmented more such classes in order to have a uniform training set(see next).
+Anyhow, some classes occur much less in absolute terms, so I augmented more such classes in order to have a uniform training set (see next).
 
 
 ### Design and Test a Model Architecture
@@ -58,7 +58,7 @@ Then I applied image effects in order to augment the training set. In particular
 4. zoom
 
 From a quick look at the samples there seemed to be already enough blurring and brightening/darkening effects. 
-I augmented at least once  each training sample. Less numerous classes have been augmented in order to have a similar number of samples.
+I augmented at least once each training sample. Less numerous classes have been augmented so that all classes have a similar number of samples in the training set
 
 ![alt text][image5]
 
