@@ -113,8 +113,8 @@ I decided to keep the canonical LeNet architecture, as since the first tests it 
 On the other hand, it was immidiately evident the need for regularization (poor validation accuracy).  
 I first tryed to add dropout just to the fully connected layers (as in the original dropout paper), but, despite a significant improvement, some overfitting was evident (still significant difference between training and validation accuracy).  
 Surfing the net for papers, I found that a slight dropout is recommended also for the convolutional layers, in order to avoid model noise propagation to the deeper levels.  
-The final model doesn't seem to suffer by overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks.  
-The detailed analysis of the precision/recall of the single classes helps to find specific issues related e.g. to the training set (to be further and thoroughly augmented for those classes).
+The final model doesn't seem to suffer by overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks and just eventually refining the regularization.  
+The detailed analysis of the precision/recall of the single classes helps to find specific issues (e.g. needs for thorough augmentation and/or data collection).
 
 ### Test a Model on New Images
 
