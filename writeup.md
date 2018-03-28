@@ -50,14 +50,14 @@ Anyhow, some classes occur much less in absolute terms, so I augmented more such
 #### 1. Describe how you preprocessed the image data. What techniques were chosen and why did you choose these techniques? Consider including images showing the output of each preprocessing technique. Pre-processing refers to techniques such as converting to grayscale, normalization, etc. (OPTIONAL: As described in the "Stand Out Suggestions" part of the rubric, if you generated additional data for training, describe why you decided to generate additional data, how you generated the data, and provide example images of the additional data. Then describe the characteristics of the augmented training set like number of images in the set, number of images for each class, etc.)
 
 First I applied grayscale to images: color information doesn't seem to be extremely meaningful in order to discern from a sign to another.  
-Then I applied image effects in order to augment the training set. In particular, I applied the following transformations, randomly:
+Then I applied image effects in order to augment the training set, in particular for the less numerous classes. I applied the following geometric transformations, randomly:
 
 1. translation
 2. rotation
 3. perspective transformation
 4. zoom
 
-From a quick look at the samples there seemed to be already enough blurring and brightening/darkening effects. 
+Geometric transformations try to augment the diffferent possible views of a sign. On the other hand, from a quick look at the samples, there seemed to be already enough blurring and brightening/darkening effects. 
 I augmented at least once each training sample. Less numerous classes have been augmented so that all classes have a similar number of samples in the training set
 
 ![alt text][image5]
@@ -140,7 +140,7 @@ Here are the results of the prediction:
 | Road work				| Road work		      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. As forecasted, the third image is quite tricky.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. As forecasted, the third image is quite tricky, that's why the model performs worse than on the test set.
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
