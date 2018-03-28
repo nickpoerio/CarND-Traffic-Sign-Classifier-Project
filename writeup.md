@@ -100,7 +100,7 @@ To train the model, I used the following hyperparameters:
 
 1. optimizer: ADAM
 2. batch size: 128
-3. # epochs: 50
+3. epochs: 50
 4. learning rate: 0.001
 5. keep probability for convolutions: 0.8
 6. keep probability for fully connected layers: 0.5
@@ -112,13 +112,12 @@ My final model results were:
 * validation set accuracy of 0.953 
 * test set accuracy of 0.941
 
-I decided to keep the canonical LeNet architecture, as since the first tests it didn't show significant underfitting (good accuracy on the training set).
-Besides, the MNIST problem is not too much different from this one.
-On the other hand, it was immidiately evident the need for regularization (poor validation accuracy). 
-I first tryed to add dropout just to the fully connected layers (as in the original dropout paper), but, despite a significant improvement, some overfitting was evident (still significant difference between training and validation accuracy)
-Surfing the net for papers, I found that a slight dropout is recommended also for the convolutional layers, in order to avoid model noise propagation to the deeper levels.
-The final model shows almost absence of overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks.
-The detailed analysis of the precision/recall of the single classes helps to find specific issues related e.g. to the training set (to be further and thoroughly augmented for those classes)
+I decided to keep the canonical LeNet architecture, as since the first tests it didn't show significant underfitting (good accuracy on the training set). Besides, the MNIST problem is not too much different from this one.  return
+On the other hand, it was immidiately evident the need for regularization (poor validation accuracy).  return
+I first tryed to add dropout just to the fully connected layers (as in the original dropout paper), but, despite a significant improvement, some overfitting was evident (still significant difference between training and validation accuracy).  return
+Surfing the net for papers, I found that a slight dropout is recommended also for the convolutional layers, in order to avoid model noise propagation to the deeper levels.  return
+The final model shows almost absence of overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks.  return
+The detailed analysis of the precision/recall of the single classes helps to find specific issues related e.g. to the training set (to be further and thoroughly augmented for those classes).
 
 ### Test a Model on New Images
 
