@@ -91,8 +91,6 @@ My final model consisted of the LeNet architecture with dropout, defined as foll
 | Softmax				| 	        									|
 
  
-
-
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used the following hyperparameters:
@@ -111,11 +109,11 @@ My final model results were:
 * validation set accuracy of 0.953 
 * test set accuracy of 0.941
 
-I decided to keep the canonical LeNet architecture, as since the first tests it didn't show significant underfitting (good accuracy on the training set). Besides, the MNIST problem is not too much different from this one.  return
+I decided to keep the canonical LeNet architecture, as since the first tests it didn't show significant underfitting (good accuracy on the training set). Besides, the MNIST problem is not too much different from this one.  
 On the other hand, it was immidiately evident the need for regularization (poor validation accuracy).  
 I first tryed to add dropout just to the fully connected layers (as in the original dropout paper), but, despite a significant improvement, some overfitting was evident (still significant difference between training and validation accuracy).  
 Surfing the net for papers, I found that a slight dropout is recommended also for the convolutional layers, in order to avoid model noise propagation to the deeper levels.  
-The final model shows almost absence of overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks.  
+The final model doesn't seem to suffer by overfitting. Some improvement could now be performed in accuracy, using bigger/deeper networks.  
 The detailed analysis of the precision/recall of the single classes helps to find specific issues related e.g. to the training set (to be further and thoroughly augmented for those classes).
 
 ### Test a Model on New Images
@@ -149,7 +147,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 Here's the first 5 softmax probabilities for each prediction (rounded at the 4th decimal): apart from figure #3, the other predictions are extremely accurate.
 The model is still a little bit "shortsighted" :). It should be trained with more distant images. In fact, currently, the precision and recall on the "Speed limit (70 km/h)" class appear to be very good even on the test set!
 
-Image #1: Speed limit (30 km/h)	
+#### Image #1: Speed limit (30 km/h)	
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -159,7 +157,7 @@ Image #1: Speed limit (30 km/h)
 | .0000	      			| Speed limit (20 km/h)			 				|
 | .0000				    | Speed limit (80 km/h)	     					|
 
-Image #2: Stop
+#### Image #2: Stop
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -169,7 +167,7 @@ Image #2: Stop
 | .0000	      			| Priority road					 				|
 | .0000				    | Turn left ahead		     					|
 
-Image #3: Speed limit (70 km/h)	
+#### Image #3: Speed limit (70 km/h)	
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -179,7 +177,7 @@ Image #3: Speed limit (70 km/h)
 | .1300	      			| Keep right					 				|
 | .0668				    | Speed limit (50 km/h)							|
 
-Image #4: Turn right ahead
+#### Image #4: Turn right ahead
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -189,7 +187,7 @@ Image #4: Turn right ahead
 | .0000	      			| Go straight or right			 				|
 | .0000				    | Stop					     					|
 
-Image #4: Road work
+#### Image #5: Road work
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -199,6 +197,7 @@ Image #4: Road work
 | .0000	      			| Slippery road			 						|
 | .0000				    | Wild animals crossing		   					|
 
+#### Summary
 
 ![alt text][image7] 
 
